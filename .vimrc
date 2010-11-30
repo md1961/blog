@@ -6,6 +6,8 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
+set nobackup
+
 ab rdarg call RdocArgs()
 
 scriptencoding utf-8
