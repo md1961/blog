@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101201050839) do
+ActiveRecord::Schema.define(:version => 20101201091013) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20101201050839) do
     t.datetime "updated_at"
     t.string   "excerpt"
     t.string   "location"
+    t.integer  "user_id"
   end
 
   create_table "profiles", :force => true do |t|
