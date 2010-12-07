@@ -11,6 +11,10 @@ class Article < ActiveRecord::Base
   scope :recent     , lambda { published.where("articles.published_at > ?", 1.week.ago.to_date) }
   scope :where_title, lambda { |term| where("articles.title LIKE ?", "%#{term}%") }
 
+  def published?
+    return published_at.present?
+  end
+
   def long_title
     return "#{title} - #{published_at}"
   end
